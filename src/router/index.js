@@ -1,39 +1,55 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '../pages/Home'
+
+const Home = resolve =>
+  import ('../views/home/home');
+
+const classify = resolve =>
+  import ('../views/classify/classify');
+
+const RoomList = resolve =>
+  import ('../views/RoomList');
+
+const Recommand = resolve =>
+  import ('../views/Recommand');
+
+const user = resolve =>
+  import ('../views/user/user');
+
 
 Vue.use(Router)
 
-export default new Router({
-  linkActiveClass:"is-active",
+const router = new Router({
+
+  mode: 'hash', // ['history', 'hash']
+  linkActiveClass: 'active', // active class 名称
+  scrollBehavior(to, from, savedPosition) { // 后退页面时, 保留滚动位置
+    if (savedPosition) {
+      return savedPosition;
+    }
+    return { x: 0, y: 0 };
+  },
+
   routes: [
     {
       path:'/',
       component:Home
     },
     {
-      path:'/category',
-      component:resolve =>{
-        require(['../pages/Category'],resolve)
-      }
+      path:'/classify',
+      component:classify,
     },
     {
       path:'/roomList/:gameId/:gameName',
-      component:resolve => {
-        require(['../pages/RoomList'],resolve)
-      }
+      component:RoomList
     },
     {
       path:'/recommand',
-      component:resolve => {
-        require(['../pages/Recommand'],resolve)
-      }
+      component:Recommand
     },
     {
       path:'/user',
-      component:resolve => {
-        require(['../pages/User'],resolve)
-      }
+      component:user
     },
     {
       path:"*",
@@ -41,3 +57,7 @@ export default new Router({
     }
   ]
 })
+
+
+
+export default router;

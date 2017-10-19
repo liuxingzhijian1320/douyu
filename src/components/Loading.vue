@@ -8,19 +8,25 @@
 
 </script>
 
-<style>
-  .loading{
-    height:100%;
-    position:fixed;
-    z-index:10;
-    width:100%;
-    background:#062734;
-    opacity:.4;
+<style lang="scss">
+  .loading {
+    height: 100%;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    background: #062734;
+    opacity: .4;
   }
-  .loading img{
-    width:100%;
-    height:auto;
-    position: absolute;
-    top:calc(50% - 140px);
+
+  .loading {
+
+    img {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: calc(50% - 140px);
+    }
+
   }
+
 </style>

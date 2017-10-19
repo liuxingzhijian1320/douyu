@@ -10,7 +10,7 @@
 </template>
 
 <script>
-    import PublicHeader from '../components/Header'
+    import PublicHeader from 'components/header/Header'
     export default {
         components:{
             PublicHeader
