@@ -55,6 +55,7 @@
   }
 
   .classify-content {
+    margin-top: 0.9rem;
     .ul {
       display: flex;
       flex-wrap: wrap;

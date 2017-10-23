@@ -29,7 +29,7 @@
         if (this.mySwiper) {
           this.mySwiper.update(true)
         }
-        console.info(this.swiper)
+//        console.info(this.swiper)
       }
     },
     mounted() {
@@ -42,6 +42,7 @@
   .swiper-container {
     width: 100%;
     height: 4rem;
+    margin-top: 0.9rem;
     .swiper-wrapper {
       width: 100%;
       height: 100%;

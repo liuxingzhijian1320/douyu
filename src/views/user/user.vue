@@ -12,7 +12,7 @@
                 <loading v-show="show"></loading>
             </div>
             <div class="fake-avatar" v-if="!headUrl" @click.stop="uploadHeadImg">
-                <loadig v-show="show"></loadig>
+                <loading v-show="show"></loading>
             </div>
         </div>
 
@@ -102,6 +102,10 @@
         background-size: cover;
         border-radius: 50%;
         border: 3px solid rgba(#8a5e99, .1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
     }
 
     .info-field {

@@ -3,17 +3,17 @@
     <public-header>
       <p class="title">斗鱼TV</p>
     </public-header>
-    <swiper :swiper="roomList.slice(6,10)"></swiper>
+    <swiper :swiper="roomList.slice(6,10)" ></swiper>
     <div class="home-content">
       <div class="home-ul">
         <home-item v-for="(item,index) in roomList" :item="item" :key="index"></home-item>
       </div>
-      <div class="loadMore">
+      <div class="loadMore" >
         <span @click="loadMore">点击加载更多</span>
       </div>
     </div>
     <back-top></back-top>
-    <loading v-if="showLoading"></loading>
+    <!--<loading v-if="showLoading"></loading>-->
   </div>
 </template>
 

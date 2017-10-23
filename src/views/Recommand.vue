@@ -19,5 +19,8 @@
 </script>
 
 <style>
+    .mr-content {
+        margin-top:0.9rem;
+    }
 
 </style>

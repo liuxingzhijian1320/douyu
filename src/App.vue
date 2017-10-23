@@ -52,7 +52,7 @@
   @import './assets/styles/func.css';
 
   #app {
-    padding-top: 0.9rem;
+    /*padding-top: 0.9rem;*/
   }
 
   .side-enter-active, .side-leave-active,
