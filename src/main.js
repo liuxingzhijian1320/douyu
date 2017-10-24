@@ -5,7 +5,7 @@ import App from './App'
 import router from './router'
 import * as filters from './filters';
 import axios from 'assets/scripts/http'
-console.info('axios',axios)
+
 //rem 布局
 import { rem } from 'assets/scripts/rem'; // rem
 rem();
@@ -20,8 +20,8 @@ Vue.prototype.axios = axios
 import $ from 'jquery'
 
 //引入swiper
-import '../node_modules/swiper/dist/css/swiper.min.css';
- import Swiper from 'swiper' //哪里使用swiper 则复制到哪里去
+ import '../node_modules/swiper/dist/css/swiper.min.css';
+//  import Swiper from 'swiper' //哪里使用swiper 则复制到哪里去
 
 //mint-ui
 import MessageBox from 'mint-ui/lib/message-box'
