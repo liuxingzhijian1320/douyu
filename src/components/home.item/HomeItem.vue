@@ -1,6 +1,6 @@
 <template>
   <div class="home-item">
-    <router-link :to="'/room/' + item.room_id" tag="div" class="item-con"
+    <router-link :to="'/detail/' + item.room_id" tag="div" class="item-con"
                  :style="`backgroundImage:url(${item.room_src})`">
 
       <div class="room-info">

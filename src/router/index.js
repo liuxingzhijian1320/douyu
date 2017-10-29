@@ -21,6 +21,9 @@ const user = resolve =>
 const login = resolve =>
   import ('../views/login/login');
 
+const detail = resolve =>
+  import ('../views/detail/detail');
+
 
 Vue.use(Router)
 
@@ -74,6 +77,14 @@ const router = new Router({
       component: login,
       meta: {
         title: '登陆',
+        login: false
+      }
+    },
+    {
+      path: '/detail/:id',
+      component: detail,
+      meta: {
+        title: '详情',
         login: false
       }
     },
