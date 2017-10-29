@@ -4,6 +4,7 @@
       <p class="title">斗鱼TV</p>
     </public-header>
     <swiper :swiper="roomList.slice(6,10)" ></swiper>
+    <hot-news :hot="roomList.slice(0,5)"></hot-news>
     <div class="home-content">
       <div class="home-ul">
         <home-item v-for="(item,index) in roomList" :item="item" :key="index"></home-item>
@@ -22,6 +23,7 @@
   import HomeItem from 'components/home.item/HomeItem'
   import BackTop from 'components/BackTop'
   import swiper from 'components/swiper/swiper'
+  import HotNews from 'components/hot.news/hot.news'
 
   export default {
     data() {
@@ -29,14 +31,14 @@
         showLoading: true,
         roomList: [],
         count: 0,
-        swiperData: [1, 2, 3, 5]
       }
     },
     mixins: [Public],
     components: {
       HomeItem,
       BackTop,
-      swiper
+      swiper,
+      HotNews,
     },
     activated() {
       this._fetchData(this.count)
@@ -72,6 +74,7 @@
     .home-ul {
       width: 100%;
       padding: 0.3rem;
+      padding-top:0;
       position: relative;
       display: flex;
       align-items: center;

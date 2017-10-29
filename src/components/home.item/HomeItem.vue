@@ -29,7 +29,6 @@
   .home-item {
     width: 3.3rem;
     border-radius: 0.1rem;
-
   }
 
   .item-con {
