@@ -16,6 +16,7 @@ vue + axios + vue-router
 11. 头像上传功能（本地保存base64，通过eventbus来实现通讯）
 12. 解决ios部分手机不能修改title的问题
 13. 实现filters（过滤器）
+14. 更换皮肤（localstorage的方法）
 
 
 未完成的部分：想到啥就做啥功能

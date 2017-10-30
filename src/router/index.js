@@ -9,9 +9,6 @@ const home = resolve =>
 const classify = resolve =>
   import ('../views/classify/classify');
 
-const Recommand = resolve =>
-  import ('../views/Recommand');
-
 const user = resolve =>
   import ('../views/user/user');
 
@@ -46,14 +43,6 @@ const router = new Router({
       component: classify,
       meta: {
         title: '分类',
-        login: true
-      }
-    },
-    {
-      path: '/recommand',
-      component: Recommand,
-      meta: {
-        title: '推荐',
         login: true
       }
     },

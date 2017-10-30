@@ -18,6 +18,12 @@
 
         <input type="file" accept="image/*" @change="handleFile" class="hiddenInput"/>
 
+
+        <ul class="user-ul">
+            <li class="user-li" @click="changeFace(item)" v-for="item in color" :style="{backgroundColor:`${item}`}"></li>
+        </ul>
+
+
     </div>
 </template>
 
@@ -33,6 +39,7 @@
       return {
         show: false,
         headUrl: localStorage.getItem('headImg') || '',
+        color: ['red', 'purple', 'green', 'pink', 'orange','#333']
       }
     },
     components: {
@@ -70,6 +77,11 @@
         reader.readAsDataURL(file)
       },
 
+      changeFace(val) {
+        console.info('点击了')
+        bus.$emit('face', val)
+        localStorage.setItem('face',val)
+      }
     }
   }
 </script>
@@ -119,6 +131,20 @@
         opacity: 0;
         position: absolute;
         display: none;
+    }
+
+    .user-ul {
+        display: flex;
+        width: 100%;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding:0 0.3rem;
+        margin-top:1rem;
+        .user-li {
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+        }
     }
 
 

@@ -18,7 +18,6 @@
         list: [
           {name: "首页", path: "/", className: 'fa-home'},
           {name: "全部分类", path: "/classify", className: 'fa-arrows-alt'},
-          {name: "推荐", path: "/recommand", className: 'fa-sign-out'},
           {name: "个人中心", path: "/user", className: 'fa-user'}
         ]
       }
