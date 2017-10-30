@@ -30,7 +30,7 @@
         })
       },
     },
-    mounted() {
+    activated() {
       setInterval(() => {
         this.scrollup('.hot-ul', '-0.8rem')
       }, 3000)
@@ -60,9 +60,11 @@
                 display: flex;
                 .avatar {
                     padding-top: 0.1rem;
+                    width: 0.6rem;
+                    height: 0.7rem;
                     img {
-                        width: 0.6rem;
-                        height: 0.6rem;
+                        width: 100%;
+                        height: 100%;
                         border-radius: 50%;
                     }
                 }

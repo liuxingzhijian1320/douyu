@@ -9,9 +9,6 @@ const home = resolve =>
 const classify = resolve =>
   import ('../views/classify/classify');
 
-const RoomList = resolve =>
-  import ('../views/RoomList');
-
 const Recommand = resolve =>
   import ('../views/Recommand');
 
@@ -51,10 +48,6 @@ const router = new Router({
         title: '分类',
         login: true
       }
-    },
-    {
-      path: '/roomList/:gameId/:gameName',
-      component: RoomList
     },
     {
       path: '/recommand',

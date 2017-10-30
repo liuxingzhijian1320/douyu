@@ -1,10 +1,11 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
 import router from './router'
 import * as filters from './filters';
 import axios from 'assets/scripts/http'
+import mixins from './mixins';
+
+Vue.mixin(mixins);
 
 //rem 布局
 import { rem } from 'assets/scripts/rem'; // rem

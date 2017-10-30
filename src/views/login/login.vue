@@ -63,16 +63,15 @@
       loginHandler(formData) {
         if (this.Validate(formData)) {
           console.info(formData)
-          localStorage.setItem('login_user_info_cookie',JSON.stringify(formData))
+          localStorage.setItem('login_user_info_cookie', JSON.stringify(formData))
           MessageBox.alert('登录成功').then(() => {
-//            this.$router.push({ name: 'home' })
+            this.$router.push({ name: 'home' })
 //            console.info(this.$router.query.redirect)
           })
         }
       }
     },
-    mounted(){
-      console.info(this.$router.query)
+    mounted() {
     }
   }
 </script>
@@ -93,7 +92,7 @@
             right: 0;
             top: 0;
             bottom: 0;
-            background-color: rgba(#000,0.4);
+            background-color: rgba(#000, 0.4);
 
         }
         .title {
