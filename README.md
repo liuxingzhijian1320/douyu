@@ -1,6 +1,8 @@
 # douyu-vue
 
-vue + axios + vue-router
+- vue + axios + vue-router + swiper + mint-ui
+
+- 斗鱼的api文档查看assets/pdf的文件
 
 已完成：
 1. swiper组件编写
