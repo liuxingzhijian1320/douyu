@@ -16,9 +16,12 @@
   export default {
     name: 'hotnews',
     data() {
-      return {}
+      return {
+        timer: null
+      }
     },
     props: ['hot'],
+
     methods: {
       scrollup(id, height) {
         var ul = $(id);
@@ -29,11 +32,24 @@
           liFirst.remove();
         })
       },
+
+      initTime() {
+
+        clearInterval(this.timer)
+
+        this.timer = setInterval(() => {
+          this.scrollup('.hot-ul', '-0.8rem')
+        }, 2000)
+
+      }
+
     },
     activated() {
-      setInterval(() => {
-        this.scrollup('.hot-ul', '-0.8rem')
-      }, 3000)
+      this.initTime()
+    },
+    destroyed() {
+//      this.timer = null;
+//      clearInterval(this.timer)
     }
   }
 </script>

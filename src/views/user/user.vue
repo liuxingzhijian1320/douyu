@@ -78,7 +78,6 @@
       },
 
       changeFace(val) {
-        console.info('点击了')
         bus.$emit('face', val)
         localStorage.setItem('face',val)
       }

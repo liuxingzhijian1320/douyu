@@ -34,7 +34,7 @@
       })
 
       bus.$on('face', (val) => {
-        console.info(val)
+//        console.info(val)
         this.faceValue = val
       })
 
